@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khan Mahal Exports — Royal Taste of Kashmir</title>
+  <meta name="description" content="Khan Mahal Exports — Premium Kashmiri saffron, walnuts, almonds, honey and handicrafts. Trusted worldwide.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:#fff8f2;
+      --text:#2b2b2b;
+      --muted:#696969;
+      --accent:#4b2a24;
+      --gold:#c99b34;
+      --card:#ffffff;
+      --radius:14px;
+      --max-width:1350px;
+      --shadow:0 12px 30px rgba(18,22,25,0.06);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Poppins,system-ui,Arial;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--bg) 0%, #fff5ea 100%);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.6;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:30px}
+    header{position:sticky;top:10px;z-index:60}
+    nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:18px;border-radius:14px;
+      background:rgba(255,255,255,0.95);
+      box-shadow:var(--shadow);backdrop-filter:blur(6px)
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:60px;border-radius:8px}
+    .brand .title{font-family:'Playfair Display',serif;font-size:22px}
+    .tag{font-size:13px;color:var(--muted)}
+    .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+    .nav-links a{
+      color:var(--muted);text-decoration:none;font-weight:600;
+      transition:color .3s, transform .3s
+    }
+    .nav-links a:hover{color:var(--accent);transform:translateY(-2px)}
+    .btn{
+      padding:12px 18px;border-radius:10px;
+      background:linear-gradient(90deg,var(--accent),var(--gold));
+      color:white;text-decoration:none;font-weight:700;
+      transition:all .3s;display:inline-block;text-align:center
+    }
+    .btn:hover{opacity:.9;transform:translateY(-3px) scale(1.03)}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:40px 0}
+    .hero-left{padding:8px}
+    .kicker{color:var(--accent);font-weight:700;letter-spacing:.6px}
+    h1{font-family:'Playfair Display',serif;font-size:34px;margin:8px 0}
+    p.lead{color:var(--muted);font-size:17px;margin:0;max-width:760px}
+    .hero-cta{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap}
+    .hero-right{border-radius:14px;overflow:hidden;box-shadow:var(--shadow);height:380px}
+    .hero-right img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+    .hero-right:hover img{transform:scale(1.05)}
+    .products-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:20px}
+    .prod-card{
+      position:relative;border-radius:14px;overflow:hidden;
+      box-shadow:var(--shadow);transition:transform .4s ease,box-shadow .4s ease;
+      background:white
+    }
+    .prod-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.1)}
+    .prod-card img{width:100%;height:220px;object-fit:cover;transition:transform .5s ease}
+    .prod-card:hover img{transform:scale(1.07)}
+    .prod-info{padding:16px}
+    .prod-info h3{font-family:'Playfair Display',serif;margin:0 0 6px;font-size:20px}
+    .prod-info p{color:var(--muted);font-size:14px;margin:0 0 10px}
+    .buy-btn{
+      display:inline-block;padding:10px 16px;border-radius:8px;
+      background:linear-gradient(90deg,#25d366,#128c7e);
+      color:white;font-weight:600;text-decoration:none;
+      transition:all .3s
+    }
+    .buy-btn:hover{transform:translateY(-3px) scale(1.03);opacity:.9}
+    section{margin-top:40px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow)}
+    input,textarea,select{
+      width:100%;padding:10px 12px;margin-top:6px;
+      border-radius:8px;border:1px solid #ddd;font-family:Poppins;
+      transition:border .3s
+    }
+    input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+    footer{
+      margin-top:50px;display:flex;flex-wrap:wrap;
+      align-items:center;justify-content:space-between;
+      padding:14px 0;border-top:1px solid #e8e8e8;gap:12px
+    }
+    .muted{color:var(--muted);font-size:14px}
+    .whatsapp-float{
+      position:fixed;bottom:25px;right:25px;background:#25d366;
+      color:#fff;border-radius:50%;width:60px;height:60px;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 6px 16px rgba(0,0,0,0.25);
+      text-decoration:none;transition:transform .3s ease, box-shadow .3s ease;
+      z-index:100;
+    }
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 8px 20px rgba(0,0,0,0.3)}
+    .whatsapp-float img{width:34px;height:34px}
+    .review-item{background:white;padding:14px;border-radius:10px;margin-top:12px;box-shadow:var(--shadow)}
+    .stars{color:#f4c430;font-size:18px;margin-bottom:6px}
+    @media(min-width:760px){
+      .hero{grid-template-columns:1fr 540px}
+      .products-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(min-width:1100px){
+      h1{font-size:44px}
+      .hero-right{height:480px}
+      .products-grid{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="brand">
+          <img src="logo.png" alt="Khan Mahal Exports logo">
+          <div>
+            <div class="title">Khan Mahal Exports</div>
+            <div class="tag">Royal Taste of Kashmir — Trusted Across the World</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <div class="kicker">Pure • Authentic • Kashmiri</div>
+          <h1>Khan Mahal Exports — Royal Taste of Kashmir</h1>
+          <p class="lead">We export premium Kashmiri saffron, walnuts, almonds, honey, and handicrafts to discerning buyers worldwide.</p>
+          <div class="hero-cta">
+            <a href="#products" class="btn">Explore Kashmir’s Finest</a>
+            <a href="#contact" class="muted">Get in Touch →</a>
+          </div>
+        </div>
+        <aside class="hero-right">
+          <img src="Main.png" alt="Kashmir saffron and landscape">
+        </aside>
+      </section>
+
+     <section id="products">
+  <h2>Our Products</h2>
+  <div class="products-grid">
+    
+    <article class="prod-card">
+      <img src="saffron.png" alt="Saffron">
+      <div class="prod-info">
+        <h3>Saffron</h3>
+        <p>Hand-picked premium threads — graded for aroma and color.</p>
+        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Kashmiri%20Saffron.">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="prod-card">
+      <img src="Walnut.png" alt="Walnuts">
+      <div class="prod-info">
+        <h3>Walnuts</h3>
+        <p>Fresh, well-graded, and packed as per export standards.</p>
+        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Walnuts.">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="prod-card">
+      <img src="Almond.png" alt="Almonds">
+      <div class="prod-info">
+        <h3>Almonds</h3>
+        <p>Sun-dried Kashmiri almonds, perfect for bulk or retail.</p>
+        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Almonds.">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="prod-card">
+      <img src="Honey.png" alt="Honey">
+      <div class="prod-info">
+        <h3>Honey</h3>
+        <p>Single-origin Kashmiri mountain honey — pure and golden.</p>
+        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Honey.">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="prod-card">
+      <img src="Hndi.png" alt="Handicrafts">
+      <div class="prod-info">
+        <h3>Handicrafts</h3>
+        <p>Shawls, papier-mâché & wooden art — symbols of Kashmiri culture.</p>
+        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Handicrafts.">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <!-- 🍎 Kashmiri Apples -->
+    <article class="prod-card">
+      <img src="Apple.png" alt="Kashmiri Apples">
+      <div class="prod-info">
+        <h3>Kashmiri Apples</h3>
+        <p>Freshly harvested from Kashmir’s orchards — Ambri, Delicious & Kulu varieties.</p>
+        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Kashmiri%20Apples.">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+    <!-- 🧈 Kashmiri Ghee -->
+    <article class="prod-card">
+      <img src="Ghee.png" alt="Kashmiri Ghee">
+      <div class="prod-info">
+        <h3>Kashmiri Ghee</h3>
+        <p>Traditional hand-churned ghee made from Himalayan cow milk — pure and aromatic.</p>
+        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Kashmiri%20Ghee.">Buy on WhatsApp</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+      <section id="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="card">
+          <form id="reviewForm">
+            <input type="text" id="rname" placeholder="Your Name" required>
+            <select id="rrating" required>
+              <option value="">Rating (1-5)</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+            <textarea id="rmessage" placeholder="Write your review..." required></textarea>
+            <div style="text-align:right"><button class="btn" type="submit">Submit Review</button></div>
+          </form>
+          <div id="reviewsList"><p class="muted">Loading reviews...</p></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="card">
+          <p><strong>Phone:</strong> +91 9149832060</p>
+          <p><strong>Email:</strong> khanmahalexports119@gmail.com</p>
+
+          <form action="https://formspree.io/f/xanlqolz" method="POST">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message / Inquiry" required></textarea>
+            <div style="text-align:right"><button type="submit" class="btn">Send Message</button></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="logo.png" alt="Khan Mahal Exports logo" style="height:36px;border-radius:6px">
+        <div><div style="font-weight:700">Khan Mahal Exports</div>
+          <div class="muted">Royal Taste of Kashmir — Trusted Worldwide</div></div>
+      </div>
+      <div class="muted">© <span id="year"></span> Khan Mahal Exports</div>
+    </footer>
+  </div>
+
+  <a href="https://wa.me/919149832060?text=Hello!%20I%20am%20interested%20in%20your%20Kashmiri%20products." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+  </a>
+
+  <!-- ✅ Google Sheets Review Integration -->
+ <!-- ✅ Firebase Review Storage -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getDatabase, ref, push, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBjbEe0-O3nwE4w797W26VAIaqEKsgx1fU",
+    authDomain: "khanmahalreviews.firebaseapp.com",
+    databaseURL: "https://khanmahalreviews-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "khanmahalreviews",
+    storageBucket: "khanmahalreviews.firebasestorage.app",
+    messagingSenderId: "862285257683",
+    appId: "1:862285257683:web:c8465d2dbb0925cc712d26"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  const form = document.getElementById("reviewForm");
+  const reviewsList = document.getElementById("reviewsList");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("rname").value.trim();
+    const rating = document.getElementById("rrating").value;
+    const message = document.getElementById("rmessage").value.trim();
+    if (!name || !rating || !message) return;
+
+    const review = { name, rating, message, timestamp: Date.now() };
+    await push(ref(db, "reviews/"), review);
+    form.reset();
+    loadReviews();
+  });
+
+  async function loadReviews() {
+    reviewsList.innerHTML = "Loading...";
+    const snapshot = await get(child(ref(db), "reviews/"));
+    reviewsList.innerHTML = "";
+    if (snapshot.exists()) {
+      const data = snapshot.val();
+      Object.values(data).forEach((r) => {
+        const div = document.createElement("div");
+        div.innerHTML = `<b>${r.name}</b> (${r.rating}/5)<br>${r.message}<hr>`;
+        reviewsList.appendChild(div);
+      });
+    } else {
+      reviewsList.innerHTML = "No reviews yet.";
+    }
+  }
+
+  loadReviews();
+</script>
+
+
+</body>
+</html>
