@@ -1,123 +1,73 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Khan Mahal Exports — Royal Taste of Kashmir</title>
   <meta name="description" content="Khan Mahal Exports — Premium Kashmiri saffron, walnuts, almonds, honey and handicrafts. Trusted worldwide.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg:#fff8f2;
-      --text:#2b2b2b;
-      --muted:#696969;
-      --accent:#4b2a24;
-      --gold:#c99b34;
-      --card:#ffffff;
-      --radius:14px;
-      --max-width:1350px;
-      --shadow:0 12px 30px rgba(18,22,25,0.06);
+    :root{
+      --bg:#fff8f2; --text:#2b2b2b; --muted:#696969; --accent:#4b2a24; --gold:#c99b34;
+      --card:#fff; --shadow:0 12px 30px rgba(18,22,25,0.06); --max-width:1350px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:Poppins,system-ui,Arial;
-      color:var(--text);
-      background:linear-gradient(180deg,var(--bg) 0%, #fff5ea 100%);
-      -webkit-font-smoothing:antialiased;
-      line-height:1.6;
-    }
+    body{font-family:Poppins,system-ui,Arial;color:var(--text);background:linear-gradient(180deg,var(--bg) 0%, #fff5ea 100%);-webkit-font-smoothing:antialiased;line-height:1.6}
     .container{max-width:var(--max-width);margin:0 auto;padding:30px}
-    header{position:sticky;top:10px;z-index:60}
-    nav{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:18px;border-radius:14px;
-      background:rgba(255,255,255,0.95);
-      box-shadow:var(--shadow);backdrop-filter:blur(6px)
-    }
+    header{position:sticky;top:10px;z-index:70}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:18px;border-radius:14px;background:rgba(255,255,255,0.95);box-shadow:var(--shadow);backdrop-filter:blur(6px)}
     .brand{display:flex;align-items:center;gap:12px}
     .brand img{height:60px;border-radius:8px}
     .brand .title{font-family:'Playfair Display',serif;font-size:22px}
     .tag{font-size:13px;color:var(--muted)}
     .nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-    .nav-links a{
-      color:var(--muted);text-decoration:none;font-weight:600;
-      transition:color .3s, transform .3s
-    }
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600;transition:color .3s, transform .3s}
     .nav-links a:hover{color:var(--accent);transform:translateY(-2px)}
-    .btn{
-      padding:12px 18px;border-radius:10px;
-      background:linear-gradient(90deg,var(--accent),var(--gold));
-      color:white;text-decoration:none;font-weight:700;
-      transition:all .3s;display:inline-block;text-align:center
-    }
-    .btn:hover{opacity:.9;transform:translateY(-3px) scale(1.03)}
+    .btn{padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--gold));color:white;text-decoration:none;font-weight:700;transition:all .3s;display:inline-block;text-align:center}
+    .btn:hover{opacity:.95;transform:translateY(-3px) scale(1.02)}
     .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:40px 0}
-    .hero-left{padding:8px}
     .kicker{color:var(--accent);font-weight:700;letter-spacing:.6px}
     h1{font-family:'Playfair Display',serif;font-size:34px;margin:8px 0}
     p.lead{color:var(--muted);font-size:17px;margin:0;max-width:760px}
-    .hero-cta{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap}
     .hero-right{border-radius:14px;overflow:hidden;box-shadow:var(--shadow);height:380px}
     .hero-right img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
     .hero-right:hover img{transform:scale(1.05)}
     .products-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:20px}
-    .prod-card{
-      position:relative;border-radius:14px;overflow:hidden;
-      box-shadow:var(--shadow);transition:transform .4s ease,box-shadow .4s ease;
-      background:white
-    }
+    .prod-card{position:relative;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);transition:transform .4s ease,box-shadow .4s ease;background:white;display:flex;flex-direction:column}
     .prod-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.1)}
     .prod-card img{width:100%;height:220px;object-fit:cover;transition:transform .5s ease}
     .prod-card:hover img{transform:scale(1.07)}
-    .prod-info{padding:16px}
+    .prod-info{padding:16px;display:flex;flex-direction:column;gap:8px}
     .prod-info h3{font-family:'Playfair Display',serif;margin:0 0 6px;font-size:20px}
-    .prod-info p{color:var(--muted);font-size:14px;margin:0 0 10px}
-    .buy-btn{
-      display:inline-block;padding:10px 16px;border-radius:8px;
-      background:linear-gradient(90deg,#25d366,#128c7e);
-      color:white;font-weight:600;text-decoration:none;
-      transition:all .3s
-    }
-    .buy-btn:hover{transform:translateY(-3px) scale(1.03);opacity:.9}
+    .prod-info p{color:var(--muted);font-size:14px;margin:0}
+    .price{font-weight:800;color:var(--gold);font-size:18px;margin-top:6px}
+    .prod-actions{display:flex;gap:10px;align-items:center;margin-top:8px;flex-wrap:wrap}
+    .whatsapp-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:8px;background:#25d366;color:white;text-decoration:none;font-weight:700}
+    .whatsapp-btn img{width:18px;height:18px}
     section{margin-top:40px}
     .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow)}
-    input,textarea,select{
-      width:100%;padding:10px 12px;margin-top:6px;
-      border-radius:8px;border:1px solid #ddd;font-family:Poppins;
-      transition:border .3s
-    }
+    input,textarea,select{width:100%;padding:10px 12px;margin-top:6px;border-radius:8px;border:1px solid #ddd;font-family:Poppins;transition:border .3s}
     input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
-    footer{
-      margin-top:50px;display:flex;flex-wrap:wrap;
-      align-items:center;justify-content:space-between;
-      padding:14px 0;border-top:1px solid #e8e8e8;gap:12px
-    }
+    footer{margin-top:50px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid #e8e8e8;gap:12px}
     .muted{color:var(--muted);font-size:14px}
-    .whatsapp-float{
-      position:fixed;bottom:25px;right:25px;background:#25d366;
-      color:#fff;border-radius:50%;width:60px;height:60px;
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 6px 16px rgba(0,0,0,0.25);
-      text-decoration:none;transition:transform .3s ease, box-shadow .3s ease;
-      z-index:100;
-    }
-    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 8px 20px rgba(0,0,0,0.3)}
-    .whatsapp-float img{width:34px;height:34px}
-    .review-item{background:white;padding:14px;border-radius:10px;margin-top:12px;box-shadow:var(--shadow)}
-    .stars{color:#f4c430;font-size:18px;margin-bottom:6px}
-    @media(min-width:760px){
-      .hero{grid-template-columns:1fr 540px}
-      .products-grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media(min-width:1100px){
-      h1{font-size:44px}
-      .hero-right{height:480px}
-      .products-grid{grid-template-columns:repeat(3,1fr)}
-    }
+
+    /* floating cart top-right */
+    .cart-float{position:fixed;top:22px;right:22px;background:linear-gradient(90deg,var(--accent),var(--gold));color:#fff;border-radius:999px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:0 12px 30px rgba(0,0,0,0.18);z-index:120;cursor:pointer}
+    .cart-icon{font-weight:800;font-size:16px}
+    .cart-count{background:#fff;color:var(--accent);padding:6px 8px;border-radius:999px;font-weight:800}
+    .cart-panel{position:fixed;right:20px;top:70px;width:360px;max-height:75vh;overflow:auto;background:white;border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,0.12);padding:14px;z-index:115;display:none}
+    .cart-item{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .small{font-size:13px;color:var(--muted)}
+    .qty-btn{background:#eee;border-radius:6px;padding:6px 8px;margin-left:6px;cursor:pointer;border:none}
+    @media(min-width:760px){.hero{grid-template-columns:1fr 540px}.products-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1100px){h1{font-size:44px}.hero-right{height:480px}.products-grid{grid-template-columns:repeat(3,1fr)}}
+
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;z-index:130}
+    .modal{background:white;padding:18px;border-radius:12px;max-width:520px;width:92%;box-shadow:0 20px 50px rgba(0,0,0,0.2)}
   </style>
 </head>
-
 <body>
   <div class="container">
     <header>
@@ -131,7 +81,6 @@
         </div>
         <div class="nav-links">
           <a href="#home">Home</a>
-          <a href="#about">About</a>
           <a href="#products">Products</a>
           <a href="#reviews">Reviews</a>
           <a href="#contact" class="btn">Contact</a>
@@ -141,13 +90,13 @@
 
     <main>
       <section id="home" class="hero">
-        <div class="hero-left">
+        <div>
           <div class="kicker">Pure • Authentic • Kashmiri</div>
           <h1>Khan Mahal Exports — Royal Taste of Kashmir</h1>
           <p class="lead">We export premium Kashmiri saffron, walnuts, almonds, honey, and handicrafts to discerning buyers worldwide.</p>
-          <div class="hero-cta">
+          <div style="margin-top:16px">
             <a href="#products" class="btn">Explore Kashmir’s Finest</a>
-            <a href="#contact" class="muted">Get in Touch →</a>
+            <a href="#contact" class="muted" style="margin-left:12px">Get in Touch →</a>
           </div>
         </div>
         <aside class="hero-right">
@@ -155,79 +104,86 @@
         </aside>
       </section>
 
-     <section id="products">
-  <h2>Our Products</h2>
-  <div class="products-grid">
-    
-    <article class="prod-card">
-      <img src="saffron.png" alt="Saffron">
-      <div class="prod-info">
-        <h3>Saffron</h3>
-        <p>Hand-picked premium threads — graded for aroma and color.</p>
-        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Kashmiri%20Saffron.">Buy on WhatsApp</a>
-      </div>
-    </article>
+      <section id="products">
+        <h2>Our Products</h2>
+        <div class="products-grid">
 
-    <article class="prod-card">
-      <img src="Walnut.png" alt="Walnuts">
-      <div class="prod-info">
-        <h3>Walnuts</h3>
-        <p>Fresh, well-graded, and packed as per export standards.</p>
-        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Walnuts.">Buy on WhatsApp</a>
-      </div>
-    </article>
+          <!-- Saffron -->
+          <article class="prod-card">
+            <img src="saffron.png" alt="Saffron">
+            <div class="prod-info">
+              <h3>Saffron</h3>
+              <p>Hand-picked premium threads — 100% original. Refund if fake.</p>
+              <div class="price">₹350 <span class="small" style="font-weight:600;color:var(--muted);font-size:13px">/ 1 g</span></div>
+              <div class="prod-actions">
+                <a class="btn" href="#" data-name="Saffron (1g)" data-price="350" onclick="addToCartFromBtn(event,this)">Add to Cart</a>
+                <a class="whatsapp-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Saffron%20(1g)."><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="wa">Buy on WhatsApp</a>
+              </div>
+            </div>
+          </article>
 
-    <article class="prod-card">
-      <img src="Almond.png" alt="Almonds">
-      <div class="prod-info">
-        <h3>Almonds</h3>
-        <p>Sun-dried Kashmiri almonds, perfect for bulk or retail.</p>
-        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Almonds.">Buy on WhatsApp</a>
-      </div>
-    </article>
+          <!-- Honey -->
+          <article class="prod-card">
+            <img src="Honey.png" alt="Honey">
+            <div class="prod-info">
+              <h3>Honey</h3>
+              <p>Single-origin Kashmiri mountain honey — pure and golden.</p>
+              <div class="price">₹750 <span class="small" style="font-weight:600;color:var(--muted);font-size:13px">/ 500 g</span></div>
+              <div class="prod-actions">
+                <a class="btn" href="#" data-name="Honey (500g)" data-price="750" onclick="addToCartFromBtn(event,this)">Add to Cart</a>
+                <a class="whatsapp-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Honey%20(500g)."><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="wa">Buy on WhatsApp</a>
+              </div>
+            </div>
+          </article>
 
-    <article class="prod-card">
-      <img src="Honey.png" alt="Honey">
-      <div class="prod-info">
-        <h3>Honey</h3>
-        <p>Single-origin Kashmiri mountain honey — pure and golden.</p>
-        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Honey.">Buy on WhatsApp</a>
-      </div>
-    </article>
+          <!-- Almonds -->
+          <article class="prod-card">
+            <img src="Almond.png" alt="Almonds">
+            <div class="prod-info">
+              <h3>Almonds</h3>
+              <p>Sun-dried Kashmiri almonds — perfect for bulk or retail.</p>
+              <div class="price">₹1300 <span class="small" style="font-weight:600;color:var(--muted);font-size:13px">/ 500 g</span></div>
+              <div class="prod-actions">
+                <a class="btn" href="#" data-name="Almonds (500g)" data-price="1300" onclick="addToCartFromBtn(event,this)">Add to Cart</a>
+                <a class="whatsapp-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Almonds%20(500g)."><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="wa">Buy on WhatsApp</a>
+              </div>
+            </div>
+          </article>
 
-    <article class="prod-card">
-      <img src="Hndi.png" alt="Handicrafts">
-      <div class="prod-info">
-        <h3>Handicrafts</h3>
-        <p>Shawls, papier-mâché & wooden art — symbols of Kashmiri culture.</p>
-        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Handicrafts.">Buy on WhatsApp</a>
-      </div>
-    </article>
+          <!-- Walnuts -->
+          <article class="prod-card">
+            <img src="Walnut.png" alt="Walnuts">
+            <div class="prod-info">
+              <h3>Walnuts</h3>
+              <p>Fresh, well-graded, without shells — export standard.</p>
+              <div class="price">₹1200 <span class="small" style="font-weight:600;color:var(--muted);font-size:13px">/ 500 g</span></div>
+              <div class="prod-actions">
+                <a class="btn" href="#" data-name="Walnuts (500g)" data-price="1200" onclick="addToCartFromBtn(event,this)">Add to Cart</a>
+                <a class="whatsapp-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Walnuts%20(500g)."><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="wa">Buy on WhatsApp</a>
+              </div>
+            </div>
+          </article>
 
-    <!-- 🍎 Kashmiri Apples -->
-    <article class="prod-card">
-      <img src="Apple.png" alt="Kashmiri Apples">
-      <div class="prod-info">
-        <h3>Kashmiri Apples</h3>
-        <p>Freshly harvested from Kashmir’s orchards — Ambri, Delicious & Kulu varieties.</p>
-        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Kashmiri%20Apples.">Buy on WhatsApp</a>
-      </div>
-    </article>
+          <!-- Ghee -->
+          <article class="prod-card">
+            <img src="Ghee.png" alt="Ghee">
+            <div class="prod-info">
+              <h3>Kashmiri Ghee</h3>
+              <p>Traditional hand-churned ghee made from Himalayan cow milk.</p>
+              <div class="price">₹1150 <span class="small" style="font-weight:600;color:var(--muted);font-size:13px">/ 500 ml</span></div>
+              <div class="prod-actions">
+                <a class="btn" href="#" data-name="Ghee (500ml)" data-price="1150" onclick="addToCartFromBtn(event,this)">Add to Cart</a>
+                <a class="whatsapp-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Ghee%20(500ml)."><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="wa">Buy on WhatsApp</a>
+              </div>
+            </div>
+          </article>
 
-    <!-- 🧈 Kashmiri Ghee -->
-    <article class="prod-card">
-      <img src="Ghee.png" alt="Kashmiri Ghee">
-      <div class="prod-info">
-        <h3>Kashmiri Ghee</h3>
-        <p>Traditional hand-churned ghee made from Himalayan cow milk — pure and aromatic.</p>
-        <a class="buy-btn" target="_blank" href="https://wa.me/919149832060?text=Hi!%20I%20want%20to%20buy%20Kashmiri%20Ghee.">Buy on WhatsApp</a>
-      </div>
-    </article>
+         
 
-  </div>
-</section>
+        </div>
+      </section>
 
-
+      <!-- Reviews kept -->
       <section id="reviews">
         <h2>Customer Reviews</h2>
         <div class="card">
@@ -238,7 +194,7 @@
               <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
             </select>
             <textarea id="rmessage" placeholder="Write your review..." required></textarea>
-            <div style="text-align:right"><button class="btn" type="submit">Submit Review</button></div>
+            <div style="text-align:right;margin-top:8px;"><button class="btn" type="submit">Submit Review</button></div>
           </form>
           <div id="reviewsList"><p class="muted">Loading reviews...</p></div>
         </div>
@@ -249,7 +205,6 @@
         <div class="card">
           <p><strong>Phone:</strong> +91 9149832060</p>
           <p><strong>Email:</strong> khanmahalexports119@gmail.com</p>
-
           <form action="https://formspree.io/f/xanlqolz" method="POST">
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Email" required>
@@ -270,64 +225,259 @@
     </footer>
   </div>
 
-  <a href="https://wa.me/919149832060?text=Hello!%20I%20am%20interested%20in%20your%20Kashmiri%20products." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+  <!-- Floating WhatsApp (bottom-right) -->
+  <a href="https://wa.me/919149832060?text=Hello!%20I%20am%20interested%20in%20your%20Kashmiri%20products." class="whatsapp-float" target="_blank" title="Chat on WhatsApp" style="position:fixed;bottom:22px;right:22px;z-index:120">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" style="width:46px;height:46px;border-radius:50%;background:#25d366;padding:6px;box-shadow:0 10px 20px rgba(0,0,0,0.15)">
   </a>
 
-  <!-- ✅ Google Sheets Review Integration -->
- <!-- ✅ Firebase Review Storage -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-  import { getDatabase, ref, push, get, child } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+  <!-- Floating cart top-right -->
+  <div class="cart-float" id="cartFloat" title="Open cart" onclick="toggleCartPanel()">
+    <div class="cart-icon">🛒</div>
+    <div style="font-weight:700">Cart</div>
+    <div class="cart-count" id="cartCount">0</div>
+  </div>
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBjbEe0-O3nwE4w797W26VAIaqEKsgx1fU",
-    authDomain: "khanmahalreviews.firebaseapp.com",
-    databaseURL: "https://khanmahalreviews-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "khanmahalreviews",
-    storageBucket: "khanmahalreviews.firebasestorage.app",
-    messagingSenderId: "862285257683",
-    appId: "1:862285257683:web:c8465d2dbb0925cc712d26"
-  };
+  <!-- Cart panel -->
+  <div class="cart-panel" id="cartPanel" aria-hidden="true">
+    <h3 style="margin-top:0">Your Cart</h3>
+    <div id="cartItemsArea" class="small"><p class="muted">No items yet.</p></div>
+    <div style="margin-top:10px;text-align:right">
+      <button class="btn" id="openCheckoutBtn" style="display:none">Proceed to Checkout</button>
+    </div>
+  </div>
 
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
+  <!-- Checkout modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <h3 id="checkoutTitle">Shipping & Payment</h3>
+      <p class="small muted">Fill details for shipping; we'll save order after payment.</p>
+      <form id="checkoutForm">
+        <input type="text" id="custName" placeholder="Full name" required>
+        <input type="email" id="custEmail" placeholder="Email" required>
+        <input type="tel" id="custPhone" placeholder="Phone (e.g. 9149832060)" required>
+        <textarea id="custAddress" placeholder="Shipping address (include city, state, PIN)" required></textarea>
+        <div style="display:flex;gap:8px;margin-top:10px;justify-content:flex-end">
+          <button type="button" class="btn" onclick="closeCheckoutModal()" style="background:#ddd;color:#222">Cancel</button>
+          <button type="submit" class="btn">Pay Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-  const form = document.getElementById("reviewForm");
-  const reviewsList = document.getElementById("reviewsList");
+  <!-- Razorpay script -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const name = document.getElementById("rname").value.trim();
-    const rating = document.getElementById("rrating").value;
-    const message = document.getElementById("rmessage").value.trim();
-    if (!name || !rating || !message) return;
+  <!-- Module: Firebase + app logic -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
-    const review = { name, rating, message, timestamp: Date.now() };
-    await push(ref(db, "reviews/"), review);
-    form.reset();
-    loadReviews();
-  });
+    // Firebase config (existing project)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBjbEe0-O3nwE4w797W26VAIaqEKsgx1fU",
+      authDomain: "khanmahalreviews.firebaseapp.com",
+      databaseURL: "https://khanmahalreviews-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "khanmahalreviews",
+      storageBucket: "khanmahalreviews.firebasestorage.app",
+      messagingSenderId: "862285257683",
+      appId: "1:862285257683:web:c8465d2dbb0925cc712d26"
+    };
 
-  async function loadReviews() {
-    reviewsList.innerHTML = "Loading...";
-    const snapshot = await get(child(ref(db), "reviews/"));
-    reviewsList.innerHTML = "";
-    if (snapshot.exists()) {
-      const data = snapshot.val();
-      Object.values(data).forEach((r) => {
-        const div = document.createElement("div");
-        div.innerHTML = `<b>${r.name}</b> (${r.rating}/5)<br>${r.message}<hr>`;
-        reviewsList.appendChild(div);
-      });
-    } else {
-      reviewsList.innerHTML = "No reviews yet.";
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // Reviews: load & submit
+    const reviewForm = document.getElementById("reviewForm");
+    const reviewsList = document.getElementById("reviewsList");
+
+    async function loadReviews(){
+      reviewsList.innerHTML = "Loading...";
+      try {
+        const snap = await get(ref(db, 'reviews/'));
+        reviewsList.innerHTML = "";
+        if (snap.exists()){
+          const data = snap.val();
+          const arr = Object.values(data).sort((a,b)=>b.timestamp - a.timestamp);
+          arr.forEach(r=>{
+            const div = document.createElement("div");
+            div.className = "review-item";
+            div.style.background = "#fff";
+            div.style.padding = "12px";
+            div.style.borderRadius = "8px";
+            div.style.boxShadow = "var(--shadow)";
+            div.style.marginTop = "10px";
+            div.innerHTML = `<div style="color:#f4c430;font-size:16px">${"★".repeat(Math.min(5, r.rating))}</div><b>${r.name}</b> <div class="small muted">${new Date(r.timestamp).toLocaleString()}</div><p style="margin:.4rem 0">${r.message}</p>`;
+            reviewsList.appendChild(div);
+          });
+        } else {
+          reviewsList.innerHTML = "<p class='muted'>No reviews yet.</p>";
+        }
+      } catch(err){
+        reviewsList.innerHTML = "<p class='muted'>Could not load reviews right now.</p>";
+        console.error("loadReviews:", err);
+      }
     }
-  }
+    loadReviews();
+    setInterval(loadReviews, 30000);
 
-  loadReviews();
-</script>
+    reviewForm.addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      const name = document.getElementById("rname").value.trim();
+      const rating = document.getElementById("rrating").value;
+      const message = document.getElementById("rmessage").value.trim();
+      if (!name || !rating || !message) return;
+      const review = { name, rating, message, timestamp: Date.now() };
+      try {
+        await push(ref(db, 'reviews/'), review);
+        reviewForm.reset();
+        loadReviews();
+      } catch(err){
+        alert("Could not submit review. Try again later.");
+        console.error("submitReview:", err);
+      }
+    });
 
+    // Cart logic (group same items)
+    let cart = []; // {name, price, qty}
+    function addToCart(name, price){
+      price = Number(price);
+      const existing = cart.find(i => i.name === name);
+      if (existing) existing.qty += 1;
+      else cart.push({ name, price, qty: 1 });
+      renderCart();
+    }
 
+    window.addToCartFromBtn = function(e, btn){
+      e.preventDefault();
+      addToCart(btn.dataset.name, btn.dataset.price);
+      // visual feedback
+      btn.animate([{ transform: "translateY(0)" }, { transform: "translateY(-6px)" }, { transform: "translateY(0)" }], { duration: 300 });
+    };
+
+    function renderCart(){
+      const area = document.getElementById("cartItemsArea");
+      const countEl = document.getElementById("cartCount");
+      const checkoutBtn = document.getElementById("openCheckoutBtn");
+      if (cart.length === 0){
+        area.innerHTML = "<p class='muted'>No items yet.</p>";
+        countEl.textContent = "0";
+        checkoutBtn.style.display = "none";
+        return;
+      }
+      const totalItems = cart.reduce((s,i)=>s+i.qty,0);
+      countEl.textContent = totalItems;
+      checkoutBtn.style.display = "inline-block";
+
+      let html = "<div>";
+      cart.forEach((it, idx) => {
+        html += `<div class="cart-item"><div style="flex:1"><strong>${it.name}</strong><div class="small muted">₹${it.price} × ${it.qty} = ₹${it.price * it.qty}</div></div>
+                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+                   <div>
+                     <button class="qty-btn" onclick="decreaseQty(${idx})">−</button>
+                     <button class="qty-btn" onclick="increaseQty(${idx})">＋</button>
+                   </div>
+                   <a href="#" onclick="removeIdx(${idx})" class="small" style="color:red">Remove</a>
+                 </div></div>`;
+      });
+      const total = cart.reduce((s,i)=>s + i.price * i.qty, 0);
+      html += `</div><hr><div style="text-align:right"><strong>Total: ₹${total}</strong></div>`;
+      area.innerHTML = html;
+    }
+
+    window.increaseQty = function(i){ cart[i].qty++; renderCart(); };
+    window.decreaseQty = function(i){ if (cart[i].qty>1) cart[i].qty--; else removeIdx(i); renderCart(); };
+    window.removeIdx = function(i){ cart.splice(i,1); renderCart(); };
+
+    // cart panel toggle
+    function toggleCartPanel(){
+      const panel = document.getElementById("cartPanel");
+      panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }
+    window.toggleCartPanel = toggleCartPanel;
+
+    // open checkout modal
+    const modalBackdrop = document.getElementById("modalBackdrop");
+    const openCheckoutBtn = document.getElementById("openCheckoutBtn");
+    openCheckoutBtn.addEventListener("click", ()=>{
+      document.getElementById("custName").value = "";
+      document.getElementById("custEmail").value = "";
+      document.getElementById("custPhone").value = "";
+      document.getElementById("custAddress").value = "";
+      modalBackdrop.style.display = "flex";
+    });
+    window.closeCheckoutModal = function(){ modalBackdrop.style.display = "none"; };
+
+    // Razorpay key (test)
+    const RAZORPAY_KEY = "rzp_test_ReO24OeHgczpiQ";
+
+    // Checkout submit -> Razorpay
+    const checkoutForm = document.getElementById("checkoutForm");
+    checkoutForm.addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      if (cart.length === 0){ alert("Cart is empty."); return; }
+
+      const custName = document.getElementById("custName").value.trim();
+      const custEmail = document.getElementById("custEmail").value.trim();
+      const custPhone = document.getElementById("custPhone").value.trim();
+      const custAddress = document.getElementById("custAddress").value.trim();
+      if (!custName || !custEmail || !custPhone || !custAddress) { alert("Please fill all fields."); return; }
+
+      const amountINR = cart.reduce((s,i)=>s + i.price * i.qty, 0);
+      const options = {
+        key: RAZORPAY_KEY,
+        amount: Math.round(amountINR * 100),
+        currency: "INR",
+        name: "Khan Mahal Exports",
+        description: "Purchase from Khan Mahal Exports",
+        prefill: { name: custName, email: custEmail, contact: custPhone },
+        theme: { color: "#4b2a24" },
+        handler: async function (response) {
+          try {
+            const order = {
+              customer: { name: custName, email: custEmail, phone: custPhone, address: custAddress },
+              items: cart.map(i => ({ name: i.name, price: i.price, qty: i.qty })),
+              total: amountINR,
+              paymentId: response.razorpay_payment_id,
+              timestamp: Date.now()
+            };
+            await push(ref(db, 'orders/'), order);
+            alert("✅ Payment successful! Order saved. Payment ID: " + response.razorpay_payment_id);
+            cart = [];
+            renderCart();
+            closeCheckoutModal();
+            document.getElementById("cartPanel").style.display = "none";
+          } catch (err) {
+            console.error("save order err:", err);
+            alert("Payment succeeded but saving order failed. Contact admin with payment id: " + response.razorpay_payment_id);
+          }
+        },
+        modal: { ondismiss: function(){ /* user closed popup */ } }
+      };
+
+      try{
+        const rzp = new Razorpay(options);
+        rzp.open();
+      } catch(err){
+        console.error("Razorpay open error:", err);
+        alert("Something went wrong while opening the payment. Check console.");
+      }
+    });
+
+    // init UI
+    renderCart();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // close modal on backdrop click
+    modalBackdrop.addEventListener("click", (e)=>{ if (e.target === modalBackdrop) closeCheckoutModal(); });
+
+    // close cart panel when clicking outside
+    document.addEventListener("click", (e)=>{
+      const panel = document.getElementById("cartPanel");
+      const float = document.getElementById("cartFloat");
+      if (!panel.contains(e.target) && !float.contains(e.target) && panel.style.display==='block') {
+        panel.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
